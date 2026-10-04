@@ -31,11 +31,23 @@ public class CoatExperimentSimulator {
     }
 
     public double answerToQuestionOne(int[] results) {
-        return 0.0;
+        int gotZero = 0;
+
+        for (int i = 0; i < results.length; i++) {
+            if (results[i] == 0) {
+                gotZero += 1;
+            }
+        }
+        return (double) gotZero / results.length;
     }
 
     public double answerToQuestionTwo(int[] results) {
-        return 0.0;
+        int sum = 0;
+
+        for (int i = 0; i < results.length; i++) {
+            sum += results[i];
+        }
+        return (double) sum / results.length;
     }
 }
 
